@@ -21,22 +21,20 @@ const UserSelect: React.FC<CustomSelectProps> = ({ user, setUser, users }) => {
 
   return (
     <div>
-      <div>
-        <p>名前を選択してください</p>
-        <FormControl fullWidth>
-          <Select
-            className="text-3xl"
-            onChange={handleChange}
-            value={user ? user.name : ""}
-          >
-            {users.map((user: User) => (
-              <MenuItem key={user?.id} value={user?.name}>
-                {user?.name}
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
-      </div>
+      <p>名前を選択してください</p>
+      <FormControl fullWidth>
+        <Select
+          className="text-3xl"
+          onChange={handleChange}
+          value={user ? user.name : ""}
+        >
+          {users.map((user: User) => (
+            <MenuItem key={user?.id} value={user?.name}>
+              {user?.name}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
     </div>
   );
 };

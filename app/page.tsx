@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import UserSelect from "@/app/components/UserSelect";
+import TitleCard from "@/app/components/TitleCard";
 
 export default function Home() {
   const [user, setUser] = useState<User>(null);
@@ -18,7 +19,8 @@ export default function Home() {
 
   return (
     <div className="container m-auto">
-      <div className="flex flex-col h-screen justify-center">
+      <div className="flex flex-col h-screen justify-center space-y-10">
+        <TitleCard />
         <UserSelect user={user} setUser={setUser} users={users} />
       </div>
     </div>
